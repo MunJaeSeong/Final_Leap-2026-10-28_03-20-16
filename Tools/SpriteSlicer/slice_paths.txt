@@ -1,0 +1,6 @@
+c:\Users\awt48\Documents\GitHub\Final_Leap\Assets\Image\뿔 달린 기사 게임 스프라이트 시트.png
+c:\Users\awt48\Documents\GitHub\Final_Leap\Assets\Image\푸른빛 올빼미 몬스터 스프라이트 시트.png
+c:\Users\awt48\Documents\GitHub\Final_Leap\Assets\Image\청록빛 판타지 동굴 타일셋 스프라이트 시트.png
+c:\Users\awt48\Documents\GitHub\Final_Leap\Assets\Image\Final_Leap.png
+c:\Users\awt48\Documents\GitHub\Final_Leap\Assets\Image\안개 낀 지하 동굴의 유령 군주.png
+c:\Users\awt48\Documents\GitHub\Final_Leap\Tools\SpriteSlicer\out

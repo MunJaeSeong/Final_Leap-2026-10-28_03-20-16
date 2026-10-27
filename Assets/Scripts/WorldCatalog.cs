@@ -125,7 +125,7 @@ public class StagePortal : MonoBehaviour
         textGo.transform.SetParent(go.transform, false);
         textGo.transform.localPosition = new Vector3(0f, 2.85f, 0f);
         portal.caption = textGo.AddComponent<TextMesh>();
-        portal.caption.font = Font.CreateDynamicFontFromOSFont(new[] { "Malgun Gothic", "맑은 고딕" }, 48);
+        portal.caption.font = GameFont.Get();
         portal.caption.text = "↑  " + link.Label;
         portal.caption.characterSize = 0.1f;
         portal.caption.anchor = TextAnchor.MiddleCenter;
@@ -264,7 +264,7 @@ public class EmberPickup : MonoBehaviour
         textGo.transform.SetParent(go.transform, false);
         textGo.transform.localPosition = new Vector3(0f, 2.15f, 0f);
         var caption = textGo.AddComponent<TextMesh>();
-        caption.font = Font.CreateDynamicFontFromOSFont(new[] { "Malgun Gothic", "맑은 고딕" }, 48);
+        caption.font = GameFont.Get();
         caption.text = "심연의 불씨";
         caption.characterSize = 0.08f;
         caption.anchor = TextAnchor.MiddleCenter;

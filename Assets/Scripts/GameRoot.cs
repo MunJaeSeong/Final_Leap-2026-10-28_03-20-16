@@ -89,9 +89,7 @@ public class GameRoot : MonoBehaviour
     {
         Instance = this;
         Physics2D.gravity = new Vector2(0f, -36f);
-        font = Font.CreateDynamicFontFromOSFont(new[] { "Malgun Gothic", "맑은 고딕", "Gulim", "Arial" }, 64);
-        if (font == null)
-            font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
+        font = GameFont.Get();
 
         SetupCamera();
         gameObject.AddComponent<AudioFx>();
@@ -577,8 +575,11 @@ public class GameRoot : MonoBehaviour
         state = Flow.Video;
         videoSkipLock = 0.45f;
         videoPanel.SetActive(true);
-        string path = Path.Combine(Application.streamingAssetsPath, "intro.mp4");
-        if (!File.Exists(path))
+        bool web = Application.platform == RuntimePlatform.WebGLPlayer;
+        string path = web
+            ? Application.streamingAssetsPath + "/intro.mp4"
+            : Path.Combine(Application.streamingAssetsPath, "intro.mp4");
+        if (!web && !File.Exists(path))
         {
             FinishVideo();
             return;

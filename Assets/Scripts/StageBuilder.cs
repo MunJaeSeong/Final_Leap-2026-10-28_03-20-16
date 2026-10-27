@@ -705,7 +705,7 @@ public class StageBuilder : MonoBehaviour
         go.transform.SetParent(parent, false);
         go.transform.position = position;
         var text = go.AddComponent<TextMesh>();
-        text.font = Font.CreateDynamicFontFromOSFont(new[] { "Malgun Gothic", "맑은 고딕" }, 48);
+        text.font = GameFont.Get();
         text.text = message;
         text.characterSize = 0.09f;
         text.anchor = TextAnchor.MiddleCenter;

@@ -500,9 +500,7 @@ public class IceSeal : MonoBehaviour
         label.anchor = TextAnchor.MiddleCenter;
         label.alignment = TextAlignment.Center;
         label.color = new Color(0.75f, 0.95f, 1f);
-        var font = Font.CreateDynamicFontFromOSFont(new[] { "Malgun Gothic", "맑은 고딕" }, 48);
-        if (font != null)
-            label.font = font;
+        label.font = GameFont.Get();
         var mesh = labelGo.GetComponent<MeshRenderer>();
         if (mesh != null)
             mesh.sortingOrder = 41;

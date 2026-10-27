@@ -167,5 +167,8 @@ Packages/packages-lock.json linguist-generated
 # Spine export file for Unity
 *.skel.bytes            lfs
 
+# GitHub Pages serves the file itself, so the web build must not be an LFS pointer.
+docs/**                 -filter -diff -merge -text
+
 # Exceptions for .asset files such as lightning pre-baking
 LightingData.asset     binary
